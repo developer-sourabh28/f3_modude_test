@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .search-input {
+            flex: 1;
+            margin-right: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        .sort-button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .sort-button:hover {
+            background-color: #45a049;
+        }
+
+        .crypto-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 12px 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-size: 16px;
+        }
+
+        .crypto-table-body tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .crypto-logo {
+            width: 20px; 
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .red {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+        <button id="sortButton" class="sort-button">Sort by Mkt Cap</button>
+        <button id="sortPercentageButton" class="sort-button">Sort by Percentage</button>
+    </div>
+    <table id="cryptoTable" class="crypto-table">
+        <tbody id="cryptoTableBody" class="crypto-table-body"></tbody>
+    </table>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>
